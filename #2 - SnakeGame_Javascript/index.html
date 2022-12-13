@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Snake game</title>
+
+        <style>
+            body {
+                height: 100vm;
+                width: 100vm;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                background-color: black;
+            }
+
+            #game-board {
+                background-color: #CCC;
+                width: 100vmin;
+                height: 100vmin;
+                display: grid;
+                grid-template-rows: repeat(21, 1fr);
+                grid-template-columns: repeat(21, 1fr);
+            }
+
+            .snake {
+                background-color: hsl(200, 100%, 50%);
+                border: .25vmin solid black;
+            }
+
+            .food {
+                background-color: hsl(50, 100%, 50%);
+                border: .25vmin solid black;
+            }
+        </style>
+
+        <!-- can't make it a module cause get errors with CORS on local and webserver last error with MINE-->
+         <!-- normal is set to defer type="module" -->
+        <script src="/game.mjs" charset="utf-8" defer type="module"></script>
+    </head>
+
+    <body>
+        <div id="game-board"></div>
+    </body>
+</html>
